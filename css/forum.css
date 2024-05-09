@@ -327,13 +327,18 @@ input:not(:placeholder-shown) ~ .reset {
     cursor: pointer;
 }
 
-.forum-right {
-    width: 260px;
-    flex-grow: 1;
-    flex-basis: 0;
+
+.forum-right .top-user {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    border-radius: 20px;
+    padding: 20px 20px;
+    box-shadow:  -4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.top-user h3 {
+    font-weight: 500;
 }
 
 .user {
