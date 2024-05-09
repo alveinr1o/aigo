@@ -13,13 +13,9 @@
     padding: 7px 1295px 7.779px 33px;
 }
 
-.navbar-logo {
-    height: 30px;
-}
-
-.navbar-logo img{
-    height: 100%;
-    width: auto;
+.logo img {
+  height: 50px;
+  width: auto;
 }
 
 .wrapper {
