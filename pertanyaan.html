@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Rank</title>
+    <link rel="stylesheet" href="css/pertanyaan.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#"><img src="assets/logo.png" class="navbar-logo" alt="logo"></a>
+        <ul class="navbar-list">
+            <li><a href="homepage.html">Artikel</a></li>
+            <li><a href="forumdiskusi.html">Forum</a></li>
+            <li><a href="#">Daftar Kunjungan</a></li>
+        </ul>
+
+        <div class="profile-menu">
+            <div onclick="toggle()" class="profile-dropdown-btn">
+                <div class="profile-img">
+                    <i class="fa fa-user-circle"></i>
+                </div>
+
+                <span>Ahmad</span>
+            </div>
+
+            <ul class="profile-dropdown-list">
+                <li class="profile-dropdown-list-item">
+                    <a href="#"><i class="fa-regular fa user"></i>Edit Profile</a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                    <a href="#"><i class="fa-regular fa user"></i>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="forum">
+        <div class="forum-left">
+            <div class="content">
+                <p><a href="#">Pertanyaan</a></p>
+                <p><a href="tag.html">Tags</a></p>
+                <p><a href="user.html">Users</a></p>
+            </div>
+        </div>
+        <div class="forum-content">
+            <div class="pertanyaan">
+                <div class="judul">
+                    <h1>Pertanyaan</h1>
+                </div>
+                <div class="pertanyaan-content">
+                    <div class="user-pertanyaan">
+                        <div class="user">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none" id="user-profile">
+                                <g clip-path="url(#clip0_315_1454)">
+                                    <path d="M14.5454 14.5933C17.1069 14.5933 19.1817 12.4691 19.1817 9.84657C19.1817 7.22401 17.1069 5.09985 14.5454 5.09985C11.9838 5.09985 9.90904 7.22401 9.90904 9.84657C9.90904 12.4691 11.9838 14.5933 14.5454 14.5933ZM14.5454 16.9667C11.4506 16.9667 5.27271 18.5568 5.27271 21.7134V24.0867H23.818V21.7134C23.818 18.5568 17.6401 16.9667 14.5454 16.9667Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_315_1454">
+                                        <rect width="27.818" height="28.4803" fill="white" transform="translate(0.636475 0.353149)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="nama-user">Nama User</span>
+                        </div>
+                        <span>Waktu Pertanyaan</span>
+                        <div class="text-pertanyaan">
+                            <h2>Judul Pertanyaan</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate totam nulla velit, inventore aliquid ipsam? Ea quo corrupti facere, eos eaque maiores architecto officia eum reiciendis magni doloremque reprehenderit numquam quasi suscipit possimus quidem consectetur rerum placeat cupiditate quia culpa molestias aliquam nihil debitis! Autem aliquam rerum voluptatem pariatur repellat!</p>
+                            <div class="tags">
+                                <a href="#">#tag</a>
+                                <a href="#">#tag</a>
+                                <a href="#">#tag</a>
+                            </div>
+                        </div>
+                        <button class="btn">Bagikan</button>
+                    </div>
+                    <div class="user-berkomentar">
+                        <div class="user">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none" id="user-profile">
+                                <g clip-path="url(#clip0_315_1454)">
+                                    <path d="M14.5454 14.5933C17.1069 14.5933 19.1817 12.4691 19.1817 9.84657C19.1817 7.22401 17.1069 5.09985 14.5454 5.09985C11.9838 5.09985 9.90904 7.22401 9.90904 9.84657C9.90904 12.4691 11.9838 14.5933 14.5454 14.5933ZM14.5454 16.9667C11.4506 16.9667 5.27271 18.5568 5.27271 21.7134V24.0867H23.818V21.7134C23.818 18.5568 17.6401 16.9667 14.5454 16.9667Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_315_1454">
+                                        <rect width="27.818" height="28.4803" fill="white" transform="translate(0.636475 0.353149)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="nama-user">Nama User</span>
+                        </div>
+                        <div class="input-jawaban">
+                            <textarea name="text_body" cols="130" rows="5" charswidth="23" style="resize: none;"></textarea>
+                            <button class="btn">Kirim jawaban</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="komentar">
+                <div class="judul">
+                    <h1>Komentar</h1>
+                </div>
+                <div class="komentar-content">
+                    <div class="user-pertanyaan">
+                        <div class="user">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none" id="user-profile">
+                                <g clip-path="url(#clip0_315_1454)">
+                                    <path d="M14.5454 14.5933C17.1069 14.5933 19.1817 12.4691 19.1817 9.84657C19.1817 7.22401 17.1069 5.09985 14.5454 5.09985C11.9838 5.09985 9.90904 7.22401 9.90904 9.84657C9.90904 12.4691 11.9838 14.5933 14.5454 14.5933ZM14.5454 16.9667C11.4506 16.9667 5.27271 18.5568 5.27271 21.7134V24.0867H23.818V21.7134C23.818 18.5568 17.6401 16.9667 14.5454 16.9667Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_315_1454">
+                                        <rect width="27.818" height="28.4803" fill="white" transform="translate(0.636475 0.353149)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="nama-user">Nama User</span>
+                        </div>
+                        <span>Waktu Pertanyaan</span>
+                        <div class="text-pertanyaan">
+                            <h2>Judul Pertanyaan</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate totam nulla velit, inventore aliquid ipsam? Ea quo corrupti facere, eos eaque maiores architecto officia eum reiciendis magni doloremque reprehenderit numquam quasi suscipit possimus quidem consectetur rerum placeat cupiditate quia culpa molestias aliquam nihil debitis! Autem aliquam rerum voluptatem pariatur repellat!</p>
+                        </div>
+                    </div>
+                    <div class="user-pertanyaan">
+                        <div class="user">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none" id="user-profile">
+                                <g clip-path="url(#clip0_315_1454)">
+                                    <path d="M14.5454 14.5933C17.1069 14.5933 19.1817 12.4691 19.1817 9.84657C19.1817 7.22401 17.1069 5.09985 14.5454 5.09985C11.9838 5.09985 9.90904 7.22401 9.90904 9.84657C9.90904 12.4691 11.9838 14.5933 14.5454 14.5933ZM14.5454 16.9667C11.4506 16.9667 5.27271 18.5568 5.27271 21.7134V24.0867H23.818V21.7134C23.818 18.5568 17.6401 16.9667 14.5454 16.9667Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_315_1454">
+                                        <rect width="27.818" height="28.4803" fill="white" transform="translate(0.636475 0.353149)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="nama-user">Nama User</span>
+                        </div>
+                        <span>Waktu Pertanyaan</span>
+                        <div class="text-pertanyaan">
+                            <h2>Judul Pertanyaan</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate totam nulla velit, inventore aliquid ipsam? Ea quo corrupti facere, eos eaque maiores architecto officia eum reiciendis magni doloremque reprehenderit numquam quasi suscipit possimus quidem consectetur rerum placeat cupiditate quia culpa molestias aliquam nihil debitis! Autem aliquam rerum voluptatem pariatur repellat!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="assets/logo.png" alt="logo">
+            <p>Enhance The<br>Beautiful of Indonesia</p>
+            <buttom class="contact-btn">Contact Us</buttom>
+        </div>
+        <div class="footer-right">
+            <div class="footer-media">
+                <a href="#"><img src="assets/instagram.svg" alt=""></a>
+                <a href="#"><img src="assets/facebook.svg" alt=""></a>
+                <a href="#"><img src="assets/x.svg" alt=""></a>
+                <a href="#"><img src="assets/youtube.svg" alt=""></i></a>
+                <a href="#"><img src="assets/linkedin.png" alt=""></a>
+            </div>
+            <p>Cookie Policy | Terms and Conditions | <a href="#">About Us</a></p>
+            <p>© 2021. AIGO PARIWISATA INDONESIA</p>
+        </div>
+    </footer>
+    <script src="js/artikel.js"></script>
+</body>
+</html>
