@@ -371,7 +371,7 @@ footer {
 }
 
 .footer {
-  background-color: #00318E;
+  background-image: url(/assets/footer-bg.png);
   display: flex;
   gap: 250px;
   box-sizing: border-box;
