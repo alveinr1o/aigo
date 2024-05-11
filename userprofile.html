@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profil User</title>
+    <link rel="stylesheet" href="css/userprofile.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#"><img src="assets/logo.png" class="navbar-logo" alt="logo"></a>
+        <ul class="navbar-list">
+            <li><a href="homepage.html">Artikel</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Daftar Kunjungan</a></li>
+        </ul>
+
+        <div class="profile-menu">
+            <div onclick="toggle()" class="profile-dropdown-btn">
+                <div class="profile-img">
+                    <i class="fa fa-user-circle"></i>
+                </div>
+
+                <span>Ahmad</span>
+            </div>
+
+            <ul class="profile-dropdown-list">
+                <li class="profile-dropdown-list-item">
+                    <a href="#"><i class="fa-regular fa user"></i>Edit Profile</a>
+                </li>
+                <li class="profile-dropdown-list-item">
+                    <a href="#"><i class="fa-regular fa user"></i>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="profil">
+        <h1>Profil</h1>
+        <div class="photo-user">
+            <svg xmlns="http://www.w3.org/2000/svg" width="101" height="101" viewBox="0 0 101 101" fill="none">
+                <g clip-path="url(#clip0_66_2562)">
+                    <path d="M50.5002 50.5C59.8006 50.5 67.3335 42.9671 67.3335 33.6667C67.3335 24.3663 59.8006 16.8334 50.5002 16.8334C41.1997 16.8334 33.6668 24.3663 33.6668 33.6667C33.6668 42.9671 41.1997 50.5 50.5002 50.5ZM50.5002 58.9167C39.2639 58.9167 16.8335 64.5559 16.8335 75.75V84.1667H84.1668V75.75C84.1668 64.5559 61.7364 58.9167 50.5002 58.9167Z" fill="#3366FF"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_66_2562">
+                    <rect width="101" height="101" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>
+            <button>Edit</button>
+        </div>
+        <form action="">
+            <div class="form-identitas">
+                <input type="text" placeholder="Name" class="form-identitas">
+                <input type="password" placeholder="Password" class="form-identitas">
+                <input type="email" placeholder="Email" class="form-identitas">
+                <input type="password" placeholder="Confirm Password" class="form-identitas">
+                <input type="text" placeholder="Username" class="form-identitas"> 
+            </div>
+            <div class="update-delete">
+                <button class="update-btn">Update</button>
+                <button class="delete-btn">Delete Account</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="assets/logo.png" alt="logo">
+            <p>Enhance The<br>Beautiful of Indonesia</p>
+            <buttom class="contact-btn">Contact Us</buttom>
+        </div>
+        <div class="footer-right">
+            <div class="footer-media">
+                <a href="#"><img src="assets/instagram.svg" alt=""></a>
+                <a href="#"><img src="assets/facebook.svg" alt=""></a>
+                <a href="#"><img src="assets/x.svg" alt=""></a>
+                <a href="#"><img src="assets/youtube.svg" alt=""></i></a>
+                <a href="#"><img src="assets/linkedin.png" alt=""></a>
+            </div>
+            <p>Cookie Policy | Terms and Conditions | <a href="#">About Us</a></p>
+            <p>© 2021. AIGO PARIWISATA INDONESIA</p>
+        </div>
+    </footer>
+</body>
+</html>
