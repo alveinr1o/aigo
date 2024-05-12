@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  /* Section: Navbar */
+  .navbar {
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 33px 7px 33px;
+    gap: 400px;
+  }
+  
+  .navbar-logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  .navbar-list {
+    width: 100%;
+    padding-right: 2rem;
+    display: flex;
+    position: relative;
+  }
+  
+  .navbar-list li {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  
+  .navbar-list li a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .profile-dropdown {
+    position: relative;
+    width: fit-content;
+  }
+  
+  .profile-dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 150px;
+    border-radius: 50px;
+    color: var(--black);
+    /* background-color: white;
+    box-shadow: var(--shadow); */
+  
+    cursor: pointer;
+    border: 1px solid var(--secondary);
+    transition: box-shadow 0.2s ease-in, background-color 0.2s ease-in,
+      border 0.3s;
+  }
+  
+  .profile-dropdown-btn:hover {
+    background-color: var(--secondary-light-2);
+    box-shadow: var(--shadow);
+  }
+  
+  .profile-img {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: url(./assets/profile-pic.jpg);
+    background-size: cover;
+  }
+  
+  .profile-img i {
+    position: absolute;
+    right: 0;
+    bottom: 0.3rem;
+    font-size: 0.5rem;
+    color: var(--green);
+  }
+  
+  .profile-dropdown-btn span {
+    margin: 0 0.5rem;
+    margin-right: 0;
+  }
+  
+  .profile-dropdown-list {
+    position: absolute;
+    top: 68px;
+    width: 220px;
+    right: 0;
+    background-color: var(--white);
+    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: max-height 0.5s;
+  }
+  
+  .profile-dropdown-list hr {
+    border: 0.5px solid var(--green);
+  }
+  
+  .profile-dropdown-list.active {
+    max-height: 500px;
+  }
+  
+  .profile-dropdown-list-item {
+    padding: 0.5rem 0rem 0.5rem 1rem;
+    transition: background-color 0.2s ease-in, padding-left 0.2s;
+  }
+  
+  .profile-dropdown-list-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--black);
+  }
+  
+  .profile-dropdown-list-item a i {
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: var(--secondary);
+    color: var(--white);
+    line-height: 2.3rem;
+    text-align: center;
+    margin-right: 1rem;
+    border-radius: 50%;
+    transition: margin-right 0.3s;
+  }
+  
+  .profile-dropdown-list-item:hover {
+    padding-left: 1.5rem;
+    background-color: var(--secondary-light);
+  }
+
+  /* Section: Daftar Kunjungan */
+  .upper-popup {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0px auto 0px auto;
+    align-items: center;
+    padding: 40px 0px 40px 0px;
+  }
+
+  .upper-popup .buat-daftar {
+    display: flex;
+    width: 174px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 20px;
+    background: var(---Primary---Blue-source, #36F);
+  }
+
+  .buat-daftar:hover {
+    background: #00348e;
+    cursor: pointer;
+  }
+
+  .upper-popup .buat-daftar p {
+    color: #F5F5F5;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 18px */
+ }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .container-box {
+    display: flex;
+    width: 80%;
+    height: 234px;
+    padding: 17px 0px 17px 24px;
+    margin: 0px auto 0px auto;
+    justify-content: flex-end;
+    align-items: center;
+
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: -4px -4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .container-text {
+    padding: 0px 24px 0px 24px;
+  }
+
+  .container-text h2 {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .container-text p {
+    color: #000;
+    text-align: justify;
+    font-size: 21.006px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  /* Search Box */
+  
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+  .form {
+    --timing: 0.3s;
+    --width-of-input: 200px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border: 1px solid #8C8C8C;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+  }
+  /* styling of Input */
+  .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+  }
+  /* styling of animated border */
+  .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+  }
+  /* Hover on Input */
+  .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  /* here is code of animated border */
+  .form:focus-within:before {
+    transform: scale(1);
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* close button shown when typing */
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* sizing svg icons */
+  .form svg {
+    width: 17px;
+    margin-top: 3px;
+  }
+  
+  .info {
+      display: flex;
+      gap: 30px;
+      font-weight: 500;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #D9D9D9;
+  }
+  
+  .search input {
+      border-radius: 20px;
+      padding: 5px 20px;
+  }
+
+  /* Section: Footer */
+footer {
+    position: block;
+    bottom: 0;
+  }
+  
+  .footer {
+    background-image: url(/assets/footer-bg.png);
+    display: flex;
+    gap: 250px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    padding: 70px 90px;
+  }
+  
+  .footer .footer-left,
+  .footer .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .footer .footer-left {
+    width: 50%;
+  }
+  
+  .footer .footer-left img {
+    width: 250px;
+  }
+  
+  .footer .footer-left p {
+    color: #fff;
+    font-size: 37px;
+    margin: 20px 0;
+  }
+  
+  .footer .contact-btn {
+    background-color: #00318E;
+    border-radius: 20px;
+    color: #F5F5F5;
+    padding: 5px 20px;
+  }
+  
+  .footer-media img {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+  }
+  
+  .footer .footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer-right p {
+    color: #F5F5F5;
+  }
+  
+  .footer-right a {
+    text-decoration: none;
+    color: #F5F5F5;
+  }
