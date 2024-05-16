@@ -1,3 +1,11 @@
+// Navbar
+let subMenu = document.getElementById("subMenu");
+
+function toggleMenu() {
+    subMenu.classList.toggle("open-menu");
+}
+
+// Carousel
 const carousel = document.querySelector(".carousel"),
 firstImg = carousel.querySelectorAll("img")[0],
 arrowIcons = document.querySelectorAll(".wrapper i");

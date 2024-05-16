@@ -1,12 +1,5 @@
-:root {
-  --primary: #eeeeee;
-  --secondary: #227c70;
-  --green: #82cd47;
-  --secondary-light: rgb(34, 124, 112, 0.2);
-  --secondary-light-2: rgb(127, 183, 126, 0.1);
-  --white: #fff;
-  --black: #393e46;
-  --shadow: 0px 2px 8px 0px var(--secondary-light);
+html {
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -124,6 +117,7 @@
   object-fit: cover;
   margin-left: 15px;
   width: calc(100% / 3);
+  border-radius: 20px;
 }
 
 .carousel img:first-child {
