@@ -23,7 +23,16 @@ html {
 }
 
 .header-btn-content {
-  transform: translate(90%, 150%);
+  transform: translate(89%, 150%);
+}
+
+.header-btn-content button {
+  background-color: #3366FF;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 20px;
+  color: white;
+  font-size: 15px;
 }
 
 .container {

@@ -173,6 +173,11 @@ input:not(:placeholder-shown) ~ .reset {
     color: white;
 }
 
+.pertanyaan a {
+  text-decoration: none;
+  color: white;
+}
+
 .pertanyaan h3 {
     margin-bottom: 10px;
 }
