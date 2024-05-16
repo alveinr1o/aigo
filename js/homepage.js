@@ -1,11 +1,33 @@
-let profileDropdownList = document.querySelector(".profile-dropdown-list");
-let btn = document.querySelector(".profile-dropdown-btn");
+const carousel = document.querySelector(".carousel"),
+firstImage = carousel.querySelectorAll(".carousel igm")[0],
+arrowIcons = document.querySelectorAll(".wrapper i");
 
-let classList = profileDropdownList.classList;
+let isDragStart = false, prevPageX, prevScrollLeft;
+let firstImageWidth = firstImage.clientWidth + 15;
 
-const toggle = () => classList.toggle("active");
-
-window.addEventListener("click", function (e) {
-  if (!btn.contains(e.target)) classList.remove("active");
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        carousel.scrollLeft += icon.id == "left" ? -firstImageWidth : firstImageWidth;
+    });
 });
 
+const dragStart = (e) => {
+    isDragStart = true;
+    prevPageX = e.pageX;
+    prevScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+    if (!isDragStart) return;
+    e.preventDefault();
+    let positionDiff = e.pageX - prevPageX;
+    carousel.scrollleft = prevScrollLeft - positionDiff;
+}
+
+const dragStop = () => {
+    isDragStart = false;
+}
+
+carousel.addEventListener("mousemove", dragStart);
+carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("mousemove", dragStop);
