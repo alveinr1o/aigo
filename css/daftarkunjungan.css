@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    border: none;
 
     border-radius: 20px;
     background: var(---Primary---Blue-source, #36F);
@@ -38,29 +39,36 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    padding-bottom: 50px;
   }
   
   .container-box {
     display: flex;
     width: 80%;
-    height: 234px;
+    height: 210px;
     padding: 17px 0px 17px 24px;
     margin: 0px auto 0px auto;
     justify-content: flex-end;
-    align-items: center;
 
     border-radius: 20px;
     background: #FFF;
     box-shadow: -4px -4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
+  .container-box img {
+    width: 180px;
+    height: 180px;
+  }
+
   .container-text {
-    padding: 0px 24px 0px 24px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 24px 0px 24px;
+    gap: 10px;
   }
 
   .container-text h2 {
     color: #000;
-    font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -69,10 +77,35 @@
   .container-text p {
     color: #000;
     text-align: justify;
-    font-size: 21.006px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+
+  .container-maps {
+    width: 100%;
+    height: 500px;
+    background-color: #8C8C8C;
+  }
+
+  .welcome-text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-top: 30px;
+    margin: auto;
+  }
+
+  .welcome-text h1 {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .welcome-text h3 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
   }
 
   /* Search Box */
@@ -170,3 +203,91 @@
       border-radius: 20px;
       padding: 5px 20px;
   }
+
+ /* CSS untuk modal dan tombol */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.popup-map {
+  width: 100%;
+  height: 170px;
+  background-color: #8C8C8C;
+}
+
+.popup-content {
+  background-color: #fefefe;
+  width: 1000px;
+  height: 550px;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 80%;
+}
+
+.popup-content {
+  padding: 0 20px 0 20px;
+}
+
+.popup-header {
+  padding: 20px 0 20px 0;
+}
+
+.popup-body, .content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.content label {
+  font-weight: 400;
+}
+
+.content input, textarea {
+  border-radius: 20px;
+  border: 1px solid #8C8C8C;
+  padding: 5px 20px;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px 0 0 0;
+}
+
+.close {
+  border-radius: 20px;
+  background: var(---Danger---Red-700, #BF0716);
+  font-size: 20px;
+  padding: 5px 30px;
+  color: white;
+  font-weight: 500;
+  border: none;
+}
+
+.submit {
+  border-radius: 20px;
+  background: var(---Primary---Blue-source, #36F);
+  font-size: 20px;
+  padding: 5px 30px;
+  color: white;
+  font-weight: 500;
+  border: none;
+}
+
+.submit:hover, .close:hover,
+.submit:focus, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
