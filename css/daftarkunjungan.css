@@ -41,6 +41,10 @@
     gap: 30px;
     padding-bottom: 50px;
   }
+
+  .container a {
+    text-decoration: none;
+  }
   
   .container-box {
     display: flex;

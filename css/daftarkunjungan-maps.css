@@ -231,6 +231,10 @@
   .gallery {
     width: 100%;
   }
+
+  .gallery a {
+    text-decoration: none;
+  }
   
   .gallery h2 {
     font-size: 38px;

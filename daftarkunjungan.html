@@ -20,6 +20,22 @@
             <img src="assets/user-profil.png">
             <span class="-user-name">Ahmad</span>
         </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="assets/user-profil.png">
+                    <h2>Ahmad Qaulan Sadida</h2>
+                </div>
+                <hr>
+
+                <a href="userprofile.html" class="sub-menu-link">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
     </nav>
     <div id="map" class="container-maps"></div>
     <div class="welcome-text">
@@ -82,14 +98,16 @@
         </form> 
     </div>
     <div class="container">
-        <div class="container-box">
-            <img src="assets/kunjungan-bali.png" alt="">
-            <div class="container-text">
-                <h2>Judul Perjalanan</h2>
-                <p>Waktu Perjalanan</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+        <a href="daftarkunjungan-maps.html">
+            <div class="container-box">
+                <img src="assets/kunjungan-bali.png" alt="">
+                <div class="container-text">
+                    <h2>Judul Perjalanan</h2>
+                    <p>Waktu Perjalanan</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                </div>
             </div>
-        </div>
+        </a>
         <div class="container-box">
             <img src="assets/kunjungan-malang.png" alt="">
             <div class="container-text">
@@ -139,7 +157,8 @@
         </div>
     </footer>
 
-    
+<script src="js/navbar.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5gZ5e_XhZS42P61I0hWTvLSNZ9znLNg0&libraries=places"></script>
 <script src="js/daftarkunjungan.js"></script>
 </body>
 </html>
