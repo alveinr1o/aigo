@@ -13,24 +13,25 @@
             <li><a href="forumdiskusi.html">Forum</a></li>
             <li><a href="daftarkunjungan.html">Daftar Kunjungan</a></li>
         </ul>
-
-        <div class="profile-menu">
-            <div onclick="toggle()" class="profile-dropdown-btn">
-                <div class="profile-img">
-                    <i class="fa fa-user-circle"></i>
+        <div class="profile-menu" onclick="toggleMenu()">
+            <img src="assets/user-profil.png">
+            <span class="-user-name">Ahmad</span>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="assets/user-profil.png">
+                    <h2>Ahmad Qaulan Sadida</h2>
                 </div>
+                <hr>
 
-                <span>Ahmad</span>
+                <a href="userprofile.html" class="sub-menu-link">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <p>Logout</p>
+                </a>
             </div>
-
-            <ul class="profile-dropdown-list">
-                <li class="profile-dropdown-list-item">
-                    <a href="#"><i class="fa-regular fa user"></i>Edit Profile</a>
-                </li>
-                <li class="profile-dropdown-list-item">
-                    <a href="#"><i class="fa-regular fa user"></i>Logout</a>
-                </li>
-            </ul>
         </div>
     </nav>
     <div class="forum">
@@ -96,6 +97,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/artikel.js"></script>
+    <script src="js/navbar.js"></script>
 </body>
 </html>
