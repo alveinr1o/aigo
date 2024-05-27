@@ -38,8 +38,18 @@
             </div>
         </div>
     </nav>
-
+    <div class="container-header">
+        <img src="assets/pura-bali.png" alt="">
+    </div>
     <div class="container">
+        <div class="artikel-kunjungan">
+        <h1>Judul Perjalanan</h1>
+        <div class="artikel-text">
+            <div class="upper-text">
+                <p>Durasi Perjalanan</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
         <div class="upper-popup">
             <div class="search">
                 <form class="form">
@@ -56,87 +66,79 @@
                     </button>
                 </form>
             </div>
-            <div class="buat-daftar">
-                <p>Buat daftar</p>
-            </div>
+            <button class="buat-daftar" open-popup="popup">
+                <p>Buat Daftar</p>
+            </button>
         </div>
-
-        <div class="container">
-            <div class="container-box">
-                <div class="container-text">
-                    <div class="header">
-                        <div class="numbering">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-                                <circle cx="22.2132" cy="22.2132" r="22.2132" fill="#3366FF"/>
-                            </svg>
-                        </div>
-                        <h5>Judul Perjalanan</h5>
+        <div class="popup" id="popup">
+            <form method="POST" action="" class="popup-content">
+                <div class="popup-header">
+                    <h2>Kunjungan Tempat Wisata</h2>
+                </div>
+                <div class="popup-body">
+                    <div class="content">
+                        <label for="title">Judul</label>
+                        <input type="text" id="judul" name="judul" placeholder="Masukkan teks di sini" required>
                     </div>
-                    <div class="description">
-                        <p>Waktu Perjalanan</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                    <div class="content">
+                        <label for="date">Tanggal</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="content">
+                        <label for="upload">Upload Foto</label>
+                        <input type="file" id="upload" name="upload" placeholder="upload foto" required>
+                    </div>
+                    <div class="content">
+                        <label for="description">Deskripsi</label>
+                        <textarea id="deskripsi" name="deskripsi" style="resize: none;" rows="5" placeholder="Masukkan teks di sini"></textarea>
                     </div>
                 </div>
-                <img src="assets/kunjungan-persawahan.png" alt="">
-            </div>
-            <div class="container-box">
-                <div class="container-text">
-                    <div class="header">
-                        <div class="numbering">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-                                <circle cx="22.2132" cy="22.2132" r="22.2132" fill="#3366FF"/>
-                            </svg>
-                        </div>
-                        <h5>Judul Perjalanan</h5>
-                    </div>
-                    <div class="description">
-                        <p>Waktu Perjalanan</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
-                    </div>
+                <div class="popup-footer">
+                    <button type="button" class="close">Cancel</button>
+                    <button type="submit" class="submit">Submit</button>
                 </div>
-                <img src="assets/kunjungan-sawahpanen.png" alt="">
-            </div>
-            <div class="container-box">
-                <div class="container-text">
-                    <div class="header">
-                        <div class="numbering">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-                                <circle cx="22.2132" cy="22.2132" r="22.2132" fill="#3366FF"/>
-                            </svg>
-                        </div>
-                        <h5>Judul Perjalanan</h5>
+            </form> 
+        </div>
+        <div class="gallery">
+            <div class="card-container">
+                <a href="daftarkunjungan-artikel.html">
+                    <div class="card-content">
+                        <img src="assets/borobudur.jpg" alt="">
+                        <span>Borobudur</span>
                     </div>
-                    <div class="description">
-                        <p>Waktu Perjalanan</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
-                    </div>
+                </a>
+                <div class="card-content">
+                    <img src="assets/bali.jpg" alt="">
+                    <span>Bali</span>
                 </div>
-                <img src="assets/kunjungan-bukit.png" alt="">
-            </div>
-            <div class="container-box">
-                <div class="container-text">
-                    <div class="header">
-                        <div class="numbering">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
-                                <circle cx="22.2132" cy="22.2132" r="22.2132" fill="#3366FF"/>
-                            </svg>
-                        </div>
-                        <h5>Judul Perjalanan</h5>
-                    </div>
-                    <div class="description">
-                        <p>Waktu Perjalanan</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
-                    </div>
+                <div class="card-content">
+                    <img src="assets/jakarta.jpg" alt="">
+                    <span>Jakarta</span>
                 </div>
-                <img src="assets/kunjungan-desa.png" alt="">
+                <div class="card-content">
+                    <img src="assets/bromo.jpg" alt="">
+                    <span>Bromo</span>
+                </div>
+                <div class="card-content">
+                    <img src="assets/lombok.jpg" alt="">
+                    <span>Lombok</span>
+                </div>
+                <div class="card-content">
+                    <img src="assets/papua.jpg" alt="">
+                    <span>Papua</span>
+                </div>
+                <div class="card-content">
+                    <img src="assets/karimum.jpg" alt="">
+                    <span>Karimun</span>
+                </div>
+                <div class="card-content">
+                    <img src="assets/kuta.jpg" alt="">  
+                    <span>Kuta Beach</span>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="maps">
-
     </div>
-    
 
     <footer>
         <div class="wave">

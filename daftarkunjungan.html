@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="css/navbar-footer.css">
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
 </head>
 <body>
     <nav class="navbar">
@@ -38,6 +37,11 @@
             </div>
         </div>
     </nav>
+    <div id="map" class="container-maps"></div>
+    <div class="welcome-text">
+        <h1>Hai, Ahmad!</h1>
+        <h3>Yuk abadikan momen serumu hari ini</h3>
+    </div>
     <div class="upper-popup">
         <div class="search">
             <form class="form">
@@ -54,19 +58,56 @@
                 </button>
             </form>
         </div>
-        <div class="buat-daftar">
+        <button class="buat-daftar" open-popup="popup">
             <p>Buat Daftar</p>
-        </div>
+        </button>
+    </div>
+    <div class="popup" id="popup">
+        <form method="POST" action="" class="popup-content">
+            <div class="popup-header">
+                <h2>Buat Daftar Kunjungan</h2>
+            </div>
+            <div class="popup-body">
+                <div class="content">
+                    <label for="location">Lokasi</label>
+                    <div id="popup-map"></div>
+                    <input type="hidden" id="lat" name="lat">
+                    <input type="hidden" id="lng" name="lng">
+                </div>
+                <div class="content">
+                    <label for="title">Judul</label>
+                    <input type="text" id="judul" name="judul" placeholder="Masukkan teks di sini" required>
+                </div>
+                <div class="content">
+                    <label for="date">Tanggal</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="content">
+                    <label for="upload">Upload Foto</label>
+                    <input type="file" id="upload" name="upload" placeholder="upload foto" required>
+                </div>
+                <div class="content">
+                    <label for="description">Deskripsi</label>
+                    <textarea id="deskripsi" name="deskripsi" style="resize: none;" rows="5" placeholder="Masukkan teks di sini"></textarea>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button type="button" class="close">Cancel</button>
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form> 
     </div>
     <div class="container">
-        <div class="container-box">
-            <img src="assets/kunjungan-bali.png" alt="">
-            <div class="container-text">
-                <h2>Judul Perjalanan</h2>
-                <p>Waktu Perjalanan</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+        <a href="daftarkunjungan-maps.html">
+            <div class="container-box">
+                <img src="assets/kunjungan-bali.png" alt="">
+                <div class="container-text">
+                    <h2>Judul Perjalanan</h2>
+                    <p>Waktu Perjalanan</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                </div>
             </div>
-        </div>
+        </a>
         <div class="container-box">
             <img src="assets/kunjungan-malang.png" alt="">
             <div class="container-text">
@@ -92,7 +133,6 @@
             </div>
         </div>
     </div>
-
     <footer>
         <div class="wave">
             <img src="assets/footer-bg.png" alt="">
@@ -117,9 +157,8 @@
         </div>
     </footer>
 
-    
 <script src="js/navbar.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5gZ5e_XhZS42P61I0hWTvLSNZ9znLNg0&libraries=places"></script>
+<script src="js/daftarkunjungan.js"></script>
 </body>
 </html>
-
-    
