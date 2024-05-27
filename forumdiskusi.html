@@ -34,6 +34,34 @@
             </div>
         </div>
     </nav>
+    <div class="popup" id="popup">
+        <form method="POST" action="" class="popup-content">
+            <div class="popup-header">
+                <h2>Buat Pertanyaan</h2>
+            </div>
+            <div class="popup-body">
+                <div class="linkup-text">
+                    <p>Lihat <a href="tags.html">di sini</a> agar pertanyaan-Mu cepat dijawab</p>
+                </div>
+                <div class="content">
+                    <label for="title">Judul</label>
+                    <input type="text" id="judul" name="judul" placeholder="Masukkan teks di sini" required>
+                </div>
+                <div class="content">
+                    <label for="description">Deskripsi</label>
+                    <textarea id="deskripsi" name="deskripsi" style="resize: none;" rows="5" placeholder="Masukkan teks di sini"></textarea>
+                </div>
+                <div class="content">
+                    <label for="tags">Tags</label>
+                    <input type="text" id="tags" name="tags" placeholder="Masukkan teks di sini" required>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button type="button" class="close">Cancel</button>
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form> 
+    </div>
     <div class="forum">
         <div class="forum-left">
             <div class="content">
@@ -45,7 +73,7 @@
         <div class="forum-content">
             <div class="judul-buat">
                 <h1>Pertanyaan</h1>
-                <button class="buat-btn">Buat pertanyaan</button>
+                <button class="buat-daftar" open-popup="popup">Buat pertanyaan</button>
             </div>
             <div class="info">
                 <p>Terbaru</p>
@@ -183,5 +211,6 @@
         </div>
     </footer>
     <script src="js/navbar.js"></script>
+    <script src="js/daftarkunjungan.js"></script>
 </body>
 </html>
