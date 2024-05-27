@@ -18,6 +18,7 @@
     padding: 7px 33px 7px 33px;
     position: relative;
     gap: 400px;
+    z-index: 1;
   }
   
   .navbar-logo {
