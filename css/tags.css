@@ -175,18 +175,33 @@ input:not(:placeholder-shown) ~ .reset {
   font-weight: 500;
 }
 
+.user-rank .user {
+  border-radius: 20px;
+  padding: 20px 20px;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25), -4px -4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .user {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.user svg {
+.user #user-profile {
   background-color: #36F;
   border-radius: 50%;
   height: 40px;
   width: 40px;
   padding: 5px;
+}
+
+.star-poin svg {
+  background-color: white;
+}
+
+.star-poin {
+  display: flex;
+  gap: 5px;
 }
 
 .poin {

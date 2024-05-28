@@ -188,43 +188,6 @@ input:not(:placeholder-shown) ~ .reset {
     cursor: pointer;
 }
 
-
-.forum-right .top-user {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border-radius: 20px;
-    padding: 20px 20px;
-    box-shadow:  -4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-.top-user h3 {
-    font-weight: 500;
-}
-
-.user {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.user svg {
-    background-color: #36F;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    padding: 5px;
-}
-
-.poin {
-    display: flex;
-    flex-direction: column;
-}
-
-#poin {
-    color: #8C8C8C;
-}
-
 /* Forum: Pagination */
 .container {
   background: #fff;
@@ -385,4 +348,55 @@ input:not(:placeholder-shown) ~ .reset {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.forum-right .top-user {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 20px;
+  padding: 20px 20px;
+  box-shadow:  -4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.top-user h3 {
+  font-weight: 500;
+}
+
+.user-rank .user {
+  border-radius: 20px;
+  padding: 20px 20px;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25), -4px -4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user #user-profile {
+  background-color: #36F;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+}
+
+.star-poin svg {
+  background-color: white;
+}
+
+.star-poin {
+  display: flex;
+  gap: 5px;
+}
+
+.poin {
+  display: flex;
+  flex-direction: column;
+}
+
+#poin {
+  color: #8C8C8C;
 }
