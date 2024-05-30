@@ -163,6 +163,12 @@ input:not(:placeholder-shown) ~ .reset {
     padding: 5px 20px;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .pertanyaan {
     display: flex;
     flex-direction: column;

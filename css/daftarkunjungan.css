@@ -45,6 +45,12 @@
   .container a {
     text-decoration: none;
   }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
   
   .container-box {
     display: flex;

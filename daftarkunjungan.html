@@ -50,7 +50,7 @@
                         <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                 </button>
-                <input class="input" placeholder="Cari disini" required="" type="text">
+                <input class="input" placeholder="Cari disini" id="searchBar" name="searchBar" type="text">
                 <button class="reset" type="reset">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
@@ -98,40 +98,7 @@
         </form> 
     </div>
     <div class="container">
-        <a href="daftarkunjungan-maps.html">
-            <div class="container-box">
-                <img src="assets/kunjungan-bali.png" alt="">
-                <div class="container-text">
-                    <h2>Judul Perjalanan</h2>
-                    <p>Waktu Perjalanan</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                </div>
-            </div>
-        </a>
-        <div class="container-box">
-            <img src="assets/kunjungan-malang.png" alt="">
-            <div class="container-text">
-                <h2>Judul Perjalanan</h2>
-                <p>Waktu Perjalanan</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-            </div>
-        </div>
-        <div class="container-box">
-            <img src="assets/kunjungan-lombok.png" alt="">
-            <div class="container-text">
-                <h2>Judul Perjalanan</h2>
-                <p>Waktu Perjalanan</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-            </div>
-        </div>
-        <div class="container-box">
-            <img src="assets/kunjungan-sawah.png" alt="">
-            <div class="container-text">
-                <h2>Judul Perjalanan</h2>
-                <p>Waktu Perjalanan</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-            </div>
-        </div>
+        <div id="root"></div>
     </div>
     <footer>
         <div class="wave">
@@ -160,5 +127,6 @@
 <script src="js/navbar.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5gZ5e_XhZS42P61I0hWTvLSNZ9znLNg0&libraries=places"></script>
 <script src="js/daftarkunjungan.js"></script>
+<script src="js/searchbar_kunjungan.js"></script>
 </body>
 </html>

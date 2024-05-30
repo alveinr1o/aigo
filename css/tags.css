@@ -135,7 +135,7 @@ input:not(:placeholder-shown) ~ .reset {
   padding: 5px 20px;
 }
 
-.tags {
+#root {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
