@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Artikel</title>
+    <link rel="stylesheet" href="{% static 'css/artikel.css' %}">
+    <link rel="stylesheet" href="{% static "css/navbar-footer.css" %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/homepage/"><img src="{% static 'assets/logo.png' %}" class="navbar-logo" alt="logo"></a>
+        <ul class="navbar-list">
+            <li><a href="/artikel/">Artikel</a></li>
+            <li><a href="/forumdiskusi/">Forum</a></li>
+            <li><a href="/daftarkunjungan/">Daftar Kunjungan</a></li>
+        </ul>
+
+        <div class="profile-menu" onclick="toggleMenu()">
+            <img src="{% static 'assets/user-profil.png' %}">
+            <span class="-user-name">{{user.username}}</span>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="{% static 'assets/user-profil.png' %}">
+                    <h2>{{user.first_name}}</h2>
+                </div>
+                <hr>
+                <a href="/userprofile/" class="sub-menu-link">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="/" class="sub-menu-link">
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <img src="{% static 'assets/artikel.png' %}" alt="">
+        <div class="article">
+            <div class="article-title">
+                <h1>Artikel 1</h1>
+            </div>
+            <div class="article-content">
+                <span class="time">Waktu Artikel</span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt magnam debitis nostrum quia excepturi mollitia laudantium? Accusantium, alias quos? Eius fugit hic libero praesentium sed vitae, cum dolorem natus blanditiis atque repellendus, exercitationem ullam eaque! Eum neque vel repellendus tempore, aperiam modi, voluptatem laboriosam architecto expedita eaque facilis. Ea, commodi.</p><br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt magnam debitis nostrum quia excepturi mollitia laudantium? Accusantium, alias quos? Eius fugit hic libero praesentium sed vitae, cum dolorem natus blanditiis atque repellendus, exercitationem ullam eaque! Eum neque vel repellendus tempore, aperiam modi, voluptatem laboriosam architecto expedita eaque facilis. Ea, commodi.</p><br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt magnam debitis nostrum quia excepturi mollitia laudantium? Accusantium, alias quos? Eius fugit hic libero praesentium sed vitae, cum dolorem natus blanditiis atque repellendus, exercitationem ullam eaque! Eum neque vel repellendus tempore, aperiam modi, voluptatem laboriosam architecto expedita eaque facilis. Ea, commodi.</p><br>
+                <img src="{% static 'assets/artikel_content.jpg' %}" alt="">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt magnam debitis nostrum quia excepturi mollitia laudantium? Accusantium, alias quos? Eius fugit hic libero praesentium sed vitae, cum dolorem natus blanditiis atque repellendus, exercitationem ullam eaque! Eum neque vel repellendus tempore, aperiam modi, voluptatem laboriosam architecto expedita eaque facilis. Ea, commodi.</p><br>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wave">
+            <img src="{% static 'assets/footer-bg.png' %}" alt="">
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <img src= '{% static 'assets/logo.png' %}' alt="logo">
+                <p>Enhance The<br>Beautiful of Indonesia</p>
+                <buttom class="contact-btn">Contact Us</buttom>
+            </div>
+            <div class="footer-right">
+                <div class="footer-media">
+                    <a href="#"><img src="{% static 'assets/instagram.svg' %}" alt="Instagram"></a>
+                    <a href="#"><img src="{% static 'assets/facebook.svg' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'assets/x.svg' %}" alt="X"></a>
+                    <a href="#"><img src="{% static 'assets/youtube.svg' %}" alt="Youtube"></a>
+                    <a href="#"><img src="{% static 'assets/linkedin.png' %}" alt="LinkedIn"></a>
+                </div>
+                <p>Cookie Policy | Terms and Conditions | <a href="#">About Us</a></p>
+                <p>© 2021. AIGO PARIWISATA INDONESIA</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/navbar.js' %}"></script>
+</body>
+</html>

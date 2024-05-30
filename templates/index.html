@@ -1,0 +1,40 @@
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#"><img src="{% static 'assets/logo.png' alt="" %}" ></a>
+      </div>
+    </nav>
+<div class="wrapper">
+  <div class="form-box register">
+    <p class="title">Welcome</p>
+    <p class="message">Log in to your account</p>
+    &nbsp;
+    <form class="form" action="/formlogin/" method ="POST">
+      {% csrf_token %}
+      <label>
+        <input required="" name = "username"placeholder="" type="text" class="input" />
+        <span>Username</span>
+        {% for message in messages %}
+                    {% if message.tags == 'error' %}
+                        <span style="color: red;">{{ message }}</span>
+                    {% endif %}
+                {% endfor %}
+      </label>
+      <label>
+        <input required="" name = "password" placeholder="" type="password" class="input" />
+        <span>Password</span>
+      </label>
+      <button class="submit">Submit</button>
+      <p class="signin">New Here? <a href='/register/'>Register</a></p>
+    </form>
+  </div>
+</div>
+{% endblock content %}

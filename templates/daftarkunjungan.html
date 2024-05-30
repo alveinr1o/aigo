@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{% static 'css/daftarkunjungan.css' %}">
+    <link rel="stylesheet" href="{% static "css/navbar-footer.css" %}">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/homepage/">
+            <img src="{% static 'assets/logo.png' %}" class="navbar-logo" alt="logo">
+        <ul class="navbar-list">
+            <li><a href="/artikel/">Artikel</a></li>
+            <li><a href="/forumdiskusi/">Forum</a></li>
+            <li><a href="/daftarkunjungan/">Daftar Kunjungan</a></li>
+        </ul>
+
+        <div class="profile-menu" onclick="toggleMenu()">
+            <img src="{% static 'assets/user-profil.png' %}">
+            <span class="-user-name">{{user.username}}</span>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="{% static 'assets/user-profil.png' %}">
+                    <h2>{{user.first_name}}</h2>
+                </div>
+                <hr>
+                <a href="/userprofile/" class="sub-menu-link">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="/" class="sub-menu-link">
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+  
+    <div id="map" class="container-maps"></div>
+    <div class="welcome-text">
+        <h1>Hai, {{user.username}}!</h1>
+        <h3>Yuk abadikan momen serumu hari ini!</h3>
+    </div>
+    <div class="upper-popup">
+        <div class="search">
+            <form class="form">
+                <button>
+                    <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+                <input class="input" placeholder="Cari disini" required="" type="text">
+                <button class="reset" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <button class="buat-daftar" open-popup="popup">
+            <p>Buat Daftar</p>
+        </button>
+    </div>
+    <div class="popup" id="popup">
+        <form method="POST" enctype="multipart/form-data" action="/buat-daftar-kunjungan/" class="popup-content">
+            {% csrf_token %}
+            <div class="popup-header">
+                <h2>Buat Daftar Kunjungan</h2>
+            </div>
+            <div class="popup-body">
+                <div class="content">
+                    <label for="location">Lokasi</label>
+                    <div id="popup-map"></div>
+                    <input type="hidden" id="lat" name="lat">
+                    <input type="hidden" id="lng" name="lng">
+                </div>
+                <div class="content">
+                    <label for="title">Judul</label>
+                    <input type="text" id="judul" name="judul" placeholder="Masukkan teks di sini" required>
+                </div>
+                <div class="content">
+                    <label for="date">Tanggal</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="content">
+                    <label for="upload">Upload Foto</label>
+                    <input type="file" id="upload" name="upload" placeholder="upload foto" required>
+                </div>
+                <div class="content">
+                    <label for="description">Deskripsi</label>
+                    <textarea id="deskripsi" name="deskripsi" style="resize: none;" rows="5" placeholder="Masukkan teks di sini"></textarea>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button type="button" class="close">Cancel</button>
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form> 
+    </div>
+    <div class="container">
+        <div id="root"></div>
+    </div>
+    <div class="container">
+        {% for daftar_kunjungan in kunjungan_pengguna|slice:":5" %}
+            <div class="container-box">
+                <img src="{{ daftar_kunjungan.daftar_kunjungan.image.url }}" alt="Image">
+                <div class="container-text">
+                    <h2>{{ daftar_kunjungan.daftar_kunjungan.title }}</h2>
+                    <p>Waktu Perjalanan: {{ daftar_kunjungan.daftar_kunjungan.date }}</p>
+                    <p>{{ daftar_kunjungan.daftar_kunjungan.description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+    <footer>
+        <div class="wave">
+            <img src="{% static 'assets/footer-bg.png' %}" alt="">
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <img src= '{% static 'assets/logo.png' %}' alt="logo">
+                <p>Enhance The<br>Beautiful of Indonesia</p>
+                <buttom class="contact-btn">Contact Us</buttom>
+            </div>
+            <div class="footer-right">
+                <div class="footer-media">
+                    <a href="#"><img src="{% static 'assets/instagram.svg' %}" alt="Instagram"></a>
+                    <a href="#"><img src="{% static 'assets/facebook.svg' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'assets/x.svg' %}" alt="X"></a>
+                    <a href="#"><img src="{% static 'assets/youtub.svg' %}" alt="Youtube"></a>
+                </div>
+                <p>Cookie Policy | Terms and Conditions | <a href="#">About Us</a></p>
+                <p>© 2021. AIGO PARIWISATA INDONESIA</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="{% static 'js/navbar.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfFN8NuvYyNkewBVMsk9ZNIcUWDEqHg2U&libraries=places"></script>
+<script src="{% static 'js/daftarkunjungan.js' %}"></script>
+<script src="{% static 'js/searchbar_kunjungan.js' %}"></script>
+</body>
+</html>
+
+    
