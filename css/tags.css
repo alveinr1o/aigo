@@ -8,45 +8,45 @@
 }
 
 .forum-left {
-    flex-grow: 1;
-    flex-basis: 0;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .forum-left .content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 0;
-    border-top: 1px solid #D9D9D9;
-    border-bottom: 1px solid #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .content a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .forum-left p {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .forum-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 700px;
 }
 
 .judul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .judul h1 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .form button {
@@ -70,10 +70,10 @@
   display: flex;
   align-items: center;
   padding-inline: 0.8em;
-  border: 1px solid #8C8C8C;
+  border: 1px solid #8c8c8c;
   border-radius: var(--border-radius);
   transition: border-radius 0.5s ease;
-  background: var(--input-bg,#fff);
+  background: var(--input-bg, #fff);
 }
 /* styling of Input */
 .input {
@@ -142,18 +142,24 @@ input:not(:placeholder-shown) ~ .reset {
   padding: 20px 0;
 }
 
+#root a {
+  text-decoration: none;
+  color: white;
+}
+
 .tag-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 25px;  
+  padding: 25px;
   border-radius: 20px;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25), -4px -4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -4px -4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .tag-content h3 {
   font-weight: 500;
-  background-color: #36F;
+  background-color: #36f;
   border-radius: 8px;
   padding: 0 10px;
   color: white;
@@ -162,13 +168,18 @@ input:not(:placeholder-shown) ~ .reset {
   align-items: center;
 }
 
+.tag-content span {
+  color: black;
+}
+
 .forum-right .top-user {
   display: flex;
   flex-direction: column;
   gap: 15px;
   border-radius: 20px;
   padding: 20px 20px;
-  box-shadow:  -4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.25),
+    4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .top-user h3 {
@@ -178,7 +189,8 @@ input:not(:placeholder-shown) ~ .reset {
 .user-rank .user {
   border-radius: 20px;
   padding: 20px 20px;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25), -4px -4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    -4px -4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .user {
@@ -188,7 +200,7 @@ input:not(:placeholder-shown) ~ .reset {
 }
 
 .user #user-profile {
-  background-color: #36F;
+  background-color: #36f;
   border-radius: 50%;
   height: 40px;
   width: 40px;
@@ -210,5 +222,5 @@ input:not(:placeholder-shown) ~ .reset {
 }
 
 #poin {
-  color: #8C8C8C;
+  color: #8c8c8c;
 }
