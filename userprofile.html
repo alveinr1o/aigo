@@ -50,8 +50,11 @@
             </svg>
             <div class="container">
                 <div class="upload-file">
-                    <input type="file" id="uploadbtn">
-                    <label for="uploadbtn"><i class="fa-solid fa-upload"></i>Edit</label>
+                    <form method="POST" enctype="multipart/form-data" action="/upload_profile/">
+                        <input type="file" id="uploadbtn">
+                        <label for="uploadbtn"><i class="fa-solid fa-upload"></i>Upload</label>
+                        <button type="submit">Save</button>
+                    </form>
                 </div>
             </div>
         </div>
