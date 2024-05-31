@@ -37,7 +37,7 @@
             </div>
         </div>
     </nav>
-    <div id="map" class="container-maps"></div>
+    <div id="main-map" class="container-maps"></div>
     <div class="welcome-text">
         <h1>Hai, Ahmad!</h1>
         <h3>Yuk abadikan momen serumu hari ini</h3>
@@ -70,9 +70,8 @@
             <div class="popup-body">
                 <div class="content">
                     <label for="location">Lokasi</label>
-                    <div id="popup-map"></div>
-                    <input type="hidden" id="lat" name="lat">
-                    <input type="hidden" id="lng" name="lng">
+                     <div id="popup-map" class="popup-map"></div>
+                     <input id="pac-input" class="controls" type="text" placeholder="Cari Lokasi">
                 </div>
                 <div class="content">
                     <label for="title">Judul</label>
@@ -125,7 +124,7 @@
     </footer>
 
 <script src="js/navbar.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5gZ5e_XhZS42P61I0hWTvLSNZ9znLNg0&libraries=places"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfFN8NuvYyNkewBVMsk9ZNIcUWDEqHg2U&libraries=places"></script>
 <script src="js/daftarkunjungan.js"></script>
 <script src="js/searchbar_kunjungan.js"></script>
 </body>
