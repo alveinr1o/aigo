@@ -1,0 +1,150 @@
+{% load  static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Rank</title>
+    <link rel="stylesheet" href="{% static 'css/userrank.css' %}">
+    <link rel="stylesheet" href="{% static "css/navbar-footer.css" %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/homepage/"><img src="{% static 'assets/logo.png' %}" class="navbar-logo" alt="logo"></a>
+        <ul class="navbar-list">
+            <li><a href="/artikel/">Artikel</a></li>
+            <li><a href="/forumdiskusi/">Forum</a></li>
+            <li><a href="/daftarkunjungan/">Daftar Kunjungan</a></li>
+        </ul>
+
+        <div class="profile-menu" onclick="toggleMenu()">
+            <img src="{% static 'assets/user-profil.png' %}">
+            <span class="-user-name">{{user.username}}</span>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="{% static 'assets/user-profil.png' %}">
+                    <h2>{{user.first_name}}</h2>
+                </div>
+                <hr>
+                <a href="/userprofile/" class="sub-menu-link">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="/" class="sub-menu-link">
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+    </nav>    
+    <div class="forum">
+        <div class="forum-left">
+            <div class="content">
+                <p><a href="/forumdiskusi/">Pertanyaan</a></p>
+                <p><a href="/tags/">Tags</a></p>
+                <p><a href="/userrank/">Users</a></p>
+            </div>
+        </div>
+        <div class="forum-content">
+            <div class="judul">
+                <h1>Users</h1>
+                <p>Mencari nama users di AiGo untuk melihat poin kredibilitas</p>
+            </div>
+            <div class="search">
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <input class="input" placeholder="Cari disini" required="" type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="user-rank">
+                {% for alpha_user in alphabet_users%}
+                <div class="user">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none" id="user-profile">
+                        <g clip-path="url(#clip0_315_1454)">
+                            <path d="M14.5454 14.5933C17.1069 14.5933 19.1817 12.4691 19.1817 9.84657C19.1817 7.22401 17.1069 5.09985 14.5454 5.09985C11.9838 5.09985 9.90904 7.22401 9.90904 9.84657C9.90904 12.4691 11.9838 14.5933 14.5454 14.5933ZM14.5454 16.9667C11.4506 16.9667 5.27271 18.5568 5.27271 21.7134V24.0867H23.818V21.7134C23.818 18.5568 17.6401 16.9667 14.5454 16.9667Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_315_1454">
+                                <rect width="27.818" height="28.4803" fill="white" transform="translate(0.636475 0.353149)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="poin">
+                        <span>{{alpha_user.username}}</span>
+                        <div class="star-poin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 23 21" fill="none">
+                                <path d="M11.5189 0L14.0739 7.86338L22.3419 7.86338L15.6529 12.7232L18.2079 20.5866L11.5189 15.7268L4.82992 20.5866L7.38488 12.7232L0.695892 7.86338L8.96394 7.86338L11.5189 0Z" fill="#F7A02E"/>
+                            </svg>
+                            <span id="poin">{{alpha_user.poin_keaktifan}}</span> 
+                        </div> 
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+        <div class="forum-right">
+            <div class="top-user">
+                <h3>Pengguna Teraktif</h3>
+                {% for top_user in top_users %}
+                <div class="user">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none" id="user-profile">
+                        <g clip-path="url(#clip0_315_1454)">
+                            <path d="M14.5454 14.5933C17.1069 14.5933 19.1817 12.4691 19.1817 9.84657C19.1817 7.22401 17.1069 5.09985 14.5454 5.09985C11.9838 5.09985 9.90904 7.22401 9.90904 9.84657C9.90904 12.4691 11.9838 14.5933 14.5454 14.5933ZM14.5454 16.9667C11.4506 16.9667 5.27271 18.5568 5.27271 21.7134V24.0867H23.818V21.7134C23.818 18.5568 17.6401 16.9667 14.5454 16.9667Z" fill="white"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_315_1454">
+                                <rect width="27.818" height="28.4803" fill="white" transform="translate(0.636475 0.353149)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <div class="poin">
+                        <span>{{top_user.username}}</span>
+                        <div class="star-poin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 23 21" fill="none">
+                                <path d="M11.5189 0L14.0739 7.86338L22.3419 7.86338L15.6529 12.7232L18.2079 20.5866L11.5189 15.7268L4.82992 20.5866L7.38488 12.7232L0.695892 7.86338L8.96394 7.86338L11.5189 0Z" fill="#F7A02E"/>
+                            </svg>
+                            <span id="poin">{{top_user.poin_keaktifan}}</span> 
+                        </div> 
+                    </div>
+                </div>
+                {% endfor %}
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wave">
+            <img src="{% static 'assets/footer-bg.png' %}" alt="">
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <img src= '{% static 'assets/logo.png' %}' alt="logo">
+                <p>Enhance The<br>Beautiful of Indonesia</p>
+                <buttom class="contact-btn">Contact Us</buttom>
+            </div>
+            <div class="footer-right">
+                <div class="footer-media">
+                    <a href="#"><img src="{% static 'assets/instagram.svg' %}" alt="Instagram"></a>
+                    <a href="#"><img src="{% static 'assets/facebook.svg' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'assets/x.svg' %}" alt="X"></a>
+                    <a href="#"><img src="{% static 'assets/youtub.svg' %}" alt="Youtube"></a>
+                </div>
+                <p>Cookie Policy | Terms and Conditions | <a href="#">About Us</a></p>
+                <p>© 2021. AIGO PARIWISATA INDONESIA</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/artikel.js' %}"></script>
+    <script src="{% static 'js/searchbar_user.js' %}"></script>
+</body>
+</html>

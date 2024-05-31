@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}"/>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#"><img src="{% static 'assets/logo.png' %}" alt="logo" /></a>
+      </div>
+    </nav>
+<div class="wrapper">
+  <div class="form-box register">
+    <p class="title">Register</p>
+    <p class="message">Sign up to create account</p>
+    {% if error_message %}
+    <p class="message">{{ error_message }}</p>
+    {% endif %}
+    &nbsp;
+    <form action="/formregister/" method="POST" class ="form">
+      {% csrf_token %}
+      <label>
+        <input required="" name= "firstname" placeholder="" type="text" class="input" />
+        <span>Name</span>
+      </label>
+      <label>
+        <input required="" name= "email" placeholder="" type="email" class="input" />
+        <span>Email</span>
+      </label>
+      <label>
+        <input required="" name= "username"placeholder="" type="text" class="input" />
+        <span>Username</span>
+      </label>
+      <label>
+        <input required="" name= "password"placeholder="" type="password" class="input" />
+        <span>Password</span>
+      </label>
+      <label>
+        <input required="" name= "confirm_password" placeholder="" type="password" class="input" />
+        <span>Confirm password</span>
+      </label> <br>
+      <button class="submit">Submit</button>
+      <p class="signin">
+        Already have an account? <a href='/'>Login</a>
+      </p>
+    </form>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <link rel="stylesheet" href="{% static "css/navbar-footer.css" %}">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+/>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/homepage/">
+            <img src="{% static 'assets/logo.png' %}" class="navbar-logo" alt="logo">
+        <ul class="navbar-list">
+            <li><a href="/artikel/">Artikel</a></li>
+            <li><a href="/forumdiskusi/">Forum</a></li>
+            <li><a href="/daftarkunjungan/">Daftar Kunjungan</a></li>
+        </ul>
+
+        <div class="profile-menu" onclick="toggleMenu()">
+            <img src="{% static 'assets/user-profil.png' %}">
+            <span class="-user-name">{{user.username}}</span>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="{% static 'assets/user-profil.png' %}">
+                    <h2>{{user.first_name}}</h2>
+                </div>
+                <hr>
+                <a href="/userprofile/" class="sub-menu-link">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="/" class="sub-menu-link">
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="header">
+        <div class="header-text">
+            <img src="{% static 'assets/homepage_photo.png' %}" alt="header">
+            <div class="header-content">
+                <div class="header-text-content">
+                    <p>Enhance The<br>Beautiful of Indonesia</p>
+                </div>
+                <div class="header-btn-content">
+                    <a href="#articles"><button>Discover more</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2>Tahu Lebih Dalam</h2><br>
+        <div class="card-container">
+            <div class="card-content">
+                <img src="{% static 'assets/borobudur.jpg' %}" alt="">
+                <span>Borobudur</span>
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/bali.jpg' %}">
+                <span>Bali</span>
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/jakarta.jpg' %}" alt="">
+                <span>Jakarta</span>
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/bromo.jpg' %}" alt="">
+                <span>Bromo</span>
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/lombok.jpg' %}" alt="">
+                <span>Lombok</span>
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/papua.jpg' %}" alt="">
+                <span>Papua</span>
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/karimum.jpg' %}" alt="">
+                <span>Karimun</span>
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/kuta.jpg' %}" alt="">  
+                <span>Kuta Beach</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Cerita Mereka</h2><br>
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <div class="carousel">
+                <img src="{% static 'assets/slider1.jpg' %}" alt="" draggable="false">
+                <img src="{% static 'assets/slider2.jpg' %}" alt="" draggable="false">
+                <img src="{% static 'assets/slider3.jpg' %}" alt="" draggable="false">
+                <img src="{% static 'assets/slider4.jpg' %}" alt="" draggable="false">
+                <img src="{% static 'assets/slider5.jpg' %}" alt="" draggable="false">
+            </div>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <h2>Tahu Lebih Dalam</h2><br>
+        <div class="card-container">
+            <div class="card-content">
+                <img src="{% static 'assets/borobudur.jpg' %}" alt="">
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/bali.jpg' %}">
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/jakarta.jpg' %}" alt="">
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/bromo.jpg' %}" alt="">
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/lombok.jpg' %}" alt="">
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/papua.jpg' %}" alt="">
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/karimum.jpg' %}" alt="">
+            </div>
+            <div class="card-content">
+                <img src="{% static 'assets/kuta.jpg' %}" alt="">  
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>More Article</h2>
+        <div class="articles">
+            <div class="article-content">
+                <img src="{% static 'assets/bromo.jpg' %}" alt="">
+                <div class="article-text">
+                    <h3>Judul Artikel</h3>
+                    <span>Waktu Artikel</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corrupti facere sed corporis quibusdam quis consequuntur sapiente voluptatibus quas odio.</p>
+                </div>
+            </div>
+            <div class="article-content">
+                <img src="{% static 'assets/bromo.jpg' %}" alt="">
+                <div class="article-text">
+                    <h3>Judul Artikel</h3>
+                    <span>Waktu Artikel</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corrupti facere sed corporis quibusdam quis consequuntur sapiente voluptatibus quas odio.</p>
+                </div>
+            </div>
+            <div class="article-content">
+                <img src="{% static 'assets/bromo.jpg' %}" alt="">
+                <div class="article-text">
+                    <h3>Judul Artikel</h3>
+                    <span>Waktu Artikel</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corrupti facere sed corporis quibusdam quis consequuntur sapiente voluptatibus quas odio.</p>
+                </div>
+            </div>
+            <div class="article-content">
+                <img src="{% static 'assets/bromo.jpg' %}" alt="">
+                <div class="article-text">
+                    <h3>Judul Artikel</h3>
+                    <span>Waktu Artikel</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius corrupti facere sed corporis quibusdam quis consequuntur sapiente voluptatibus quas odio.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="wave">
+            <img src="{% static 'assets/footer-bg.png' %}" alt="">
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <img src= '{% static 'assets/logo.png' %}' alt="logo">
+                <p>Enhance The<br>Beautiful of Indonesia</p>
+                <buttom class="contact-btn">Contact Us</buttom>
+            </div>
+            <div class="footer-right">
+                <div class="footer-media">
+                    <a href="#"><img src="{% static 'assets/instagram.svg' %}" alt="Instagram"></a>
+                    <a href="#"><img src="{% static 'assets/facebook.svg' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'assets/x.svg' %}" alt="X"></a>
+                    <a href="#"><img src="{% static 'assets/youtube.svg' %}" alt="Youtube"></a>
+                    <a href="#"><img src="{% static 'assets/linkedin.png' %}" alt="LinkedIn"></a>
+                </div>
+                <p>Cookie Policy | Terms and Conditions | <a href="#">About Us</a></p>
+                <p>© 2021. AIGO PARIWISATA INDONESIA</p>
+            </div>
+        </div>
+    </footer>
+<script src="{% static 'js/homepage.js' %}"></script>
+<script src="{% static 'js/navbar.js' %}"></script>
+</body>
+</html>

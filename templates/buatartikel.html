@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Buat Artikel</title>
+    <link rel="stylesheet" href="{% static 'css/buatartikel.css' %}">
+    <link rel="stylesheet" href="{% static "css/navbar-footer.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/homepage/"><img src="{% static 'assets/logo.png' %}" class="navbar-logo" alt="logo"></a>
+        <ul class="navbar-list">
+            <li><a href="/artikel/">Artikel</a></li>
+            <li><a href="/forumdiskusi/">Forum</a></li>
+            <li><a href="/daftarkunjungan/">Daftar Kunjungan</a></li>
+        </ul>
+        <div class="profile-menu" onclick="toggleMenu()">
+            <img src="{% static 'assets/user-profil.png' %}">
+            <span class="-user-name">{{user.username}}</span>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="{% static 'assets/user-profil.png' %}">
+                    <h2>{{user.first_name}}</h2>
+                </div>
+                <hr>
+                <a href="/adminprofile/" class="sub-menu-link">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="/" class="sub-menu-link">
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="forum">
+        <div class="forum-left">
+            <div class="content">
+                <p><a href="#">Profile</a></p>
+                <p><a href="/buatartikel/">Article</a></p>
+                <p><a href="#">Users</a></p>
+            </div>
+        </div>
+        <div class="forum-content">
+        <form method="POST" enctype="multipart/form-data" action="/tambahartikel/">
+            {% csrf_token %}
+            <h1>Artikel</h1>
+            <div class="buat-artikel">
+                <h2>Buat Artikel</h2>
+                <div class="container">
+                    <span>Judul</span>
+                    <input type="text" name = "judul" placeholder="Masukkan teks di sini">
+                </div>
+                <div class="container">
+                    <span>Upload Foto</span>
+                    <div class="upload-file">
+                        <input type="file" name="upload" id="uploadbtn">
+                        <label for="uploadbtn"><i class="fa-solid fa-upload"></i>Tambahkan file</label>
+                    </div>
+                </div>
+                <div class="container">
+                    <span>Deskripsi</span>
+                    <input type = "text" name="deskripsi" style="resize: none;" placeholder="Masukkan teks di sini"></textarea>
+                </div>
+                <div class="btn">
+                    <button class="cancel-btn">Cancel</button>
+                    <button class="submit-btn">Submit</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+    <footer>
+        <div class="wave">
+            <img src="{% static 'assets/footer-bg.png' %}" alt="">
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <img src= '{% static 'assets/logo.png' %}' alt="logo">
+                <p>Enhance The<br>Beautiful of Indonesia</p>
+                <buttom class="contact-btn">Contact Us</buttom>
+            </div>
+            <div class="footer-right">
+                <div class="footer-media">
+                    <a href="#"><img src="{% static 'assets/instagram.svg' %}" alt="Instagram"></a>
+                    <a href="#"><img src="{% static 'assets/facebook.svg' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'assets/x.svg' %}" alt="X"></a>
+                    <a href="#"><img src="{% static 'assets/youtub.svg' %}" alt="Youtube"></a>
+                </div>
+                <p>Cookie Policy | Terms and Conditions | <a href="#">About Us</a></p>
+                <p>© 2021. AIGO PARIWISATA INDONESIA</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/navbar.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+{% load static %}
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profil User</title>
+    <link rel="stylesheet" href="{% static 'css/userprofile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar-footer.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/homepage/"><img src="{% static 'assets/logo.png' %}" class="navbar-logo" alt="logo"></a>
+        <ul class="navbar-list">
+            <li><a href="/artikel/">Artikel</a></li>
+            <li><a href="/forumdiskusi/">Forum</a></li>
+            <li><a href="/daftarkunjungan/">Daftar Kunjungan</a></li>
+        </ul>
+
+        <div class="profile-menu" onclick="toggleMenu()">
+            <img src="{% static 'assets/user-profil.png' %}">
+            <span class="-user-name">{{user.username}}</span>
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="{% static 'assets/user-profil.png' %}">
+                    <h2>{{user.first_name}}</h2>
+                </div>
+                <hr>
+
+                <a href="/userprofile/" class="sub-menu-link">
+                    <p>Edit Profile</p>
+                </a>
+                <a href="/" class="sub-menu-link">
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profil">
+        <h1>Profil</h1>
+        <div class="photo-user">
+            {% if user.profile_picture %}
+            <img src="{{ user.profile_picture.url }}" alt="Profile Picture" style="width: 101px; height: 101px; border-radius: 50%;">
+            {% else %}
+            <!-- Placeholder image or default profile picture -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="101" height="101" viewBox="0 0 101 101" fill="none">
+                <g clip-path="url(#clip0_66_2562)">
+                    <path d="M50.5002 50.5C59.8006 50.5 67.3335 42.9671 67.3335 33.6667C67.3335 24.3663 59.8006 16.8334 50.5002 16.8334C41.1997 16.8334 33.6668 24.3663 33.6668 33.6667C33.6668 42.9671 41.1997 50.5 50.5002 50.5ZM50.5002 58.9167C39.2639 58.9167 16.8335 64.5559 16.8335 75.75V84.1667H84.1668V75.75C84.1668 64.5559 61.7364 58.9167 50.5002 58.9167Z" fill="#3366FF"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_66_2562">
+                        <rect width="101" height="101" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            {% endif %}
+            <div class="container">
+                <div class="upload-file">
+                    <form method="POST" enctype="multipart/form-data" action="/upload_profile/">
+                    {% csrf_token %}
+                    <input type="file" id="uploadbtn" name="profile_picture">
+                    <label for="uploadbtn">
+                        <i class="fa-solid fa-upload"></i>Upload</label>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+       
+        <div class="profile-desc">
+            <h3>Profile Description</h3>
+            <div class="name">
+                <span>Name</span>
+                <p>{{user.first_name}}</p>
+            </div>
+            <div class="username">
+                <span>Username</span>
+                <p>{{user.username}}</p>
+            </div>
+            <div class="email">
+                <span>Email</span>
+                <p>{{user.email}}</p>
+            </div>
+        </div>
+        <h3>Edit your Profile</h3>
+        {% for message in messages %}
+        {% if message.tags == 'success' %}
+            <span style="color: black;">{{ message }}</span>
+        {% endif %}
+        {% endfor %}
+        <form action="/editprofile/" method="POST">
+            {% csrf_token %}
+            <div class="form-identitas" method ="POST" >
+                <input type="text" name ="firstname" placeholder="Name" class="form-identitas">
+                <input type="email" name = "email" placeholder="Email" class="form-identitas"> 
+                <input type="text" name = "username"placeholder="Username" class="form-identitas">
+                <input type="password"  name = "password"placeholder="Password" class="form-identitas">
+            </div>
+            <div class="update-delete">
+                <button class="update-btn">Update</button>
+            </div>
+        </form>
+    </div>
+
+
+    <footer>
+        <div class="wave">
+            <img src="{% static 'assets/footer-bg.png' %}" alt="">
+        </div>
+        <div class="footer">
+            <div class="footer-left">
+                <img src= '{% static 'assets/logo.png' %}' alt="logo">
+                <p>Enhance The<br>Beautiful of Indonesia</p>
+                <buttom class="contact-btn">Contact Us</buttom>
+            </div>
+            <div class="footer-right">
+                <div class="footer-media">
+                    <a href="#"><img src="{% static 'assets/instagram.svg' %}" alt="Instagram"></a>
+                    <a href="#"><img src="{% static 'assets/facebook.svg' %}" alt="Facebook"></a>
+                    <a href="#"><img src="{% static 'assets/x.svg' %}" alt="X"></a>
+                    <a href="#"><img src="{% static 'assets/youtub.svg' %}" alt="Youtube"></a>
+                </div>
+                <p>Cookie Policy | Terms and Conditions | <a href="#">About Us</a></p>
+                <p>© 2021. AIGO PARIWISATA INDONESIA</p>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/navbar.js' %}"></script>
+</body>
+<script>
+
+</script>
+</html>
