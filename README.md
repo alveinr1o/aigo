@@ -19,7 +19,7 @@
 | Nama                  | NIM           | Username Github                   |
 | :-------------------- | :------------ | :-------------------------------- |
 | Darmawan Setyaputra P | G6401221020   | https://github.com/dsputra12      |
-| Ahmad Qaulan Sadida   | G6401201041   | https://github.com/aqsa           |
+| Ahmad Qaulan Sadida   | G6401201041   | https://github.com/ahqsa24        |
 | Rio Alvein Hasana     | G6401201042   | https://github.com/alveinr1o      |
 
 ## Laporan 
