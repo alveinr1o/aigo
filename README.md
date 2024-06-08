@@ -10,10 +10,25 @@
 <img src='assets/logo.png'>
 <p>Perkembangan teknologi informasi dan komunikasi telah memberikan dampak signifikan pada industri pariwisata, memungkinkan wisatawan untuk dengan mudah mencari informasi tentang destinasi wisata dan berbagi pengalaman secara online. Website jurnal perjalanan ini dikembangkan untuk menyediakan platform yang komprehensif bagi wisatawan, dengan fitur utama berupa informasi tempat wisata, artikel deskriptif, forum diskusi, dan daftar kunjungan pribadi. Dalam pengembangan website ini, metode agile, khususnya Scrum dengan tambahan Kanban, dipilih untuk meningkatkan efisiensi tim. Penggunaan berbagai bahasa pemrograman seperti HTML, CSS, JavaScript, dan framework Django memungkinkan terciptanya website yang fungsional dan interaktif. Hasilnya, website ini mampu membantu pengguna dalam merencanakan perjalanan, berbagi pengalaman, dan berinteraksi dengan komunitas wisatawan lainnya, serta memberikan kemudahan dalam mencatat dan mengelola kunjungan wisata mereka. Website ini diharapkan dapat meningkatkan pengalaman wisata pengguna dan berkontribusi pada pengembangan sektor pariwisata di Indonesia.</p>
 
-## Bahasa Pemrograman
-- HTML
-- CSS
-- Django
+## Ruang Lingkup
+<ul>
+  <li>Jenis Aplikasi: Website</li>
+  <li>Alasan memilih jenis tersebut: mudah dikembangkan</li>
+  <li>Sistem Operasi: Website</li>
+  <li>Text Editor: VS Code</li>
+  <li>DBMS: SQLite</li>
+  <li>Webserver: Django Development Server</li>
+  <li>Framework: Django (Python)</li>
+  <li>Target dari aplikasi: Remaja beranjak dewasa (17-25 tahun)</li>
+  <li>Kriteria target: Para penggiat travelling yang senang bepergian</li>
+  <li>Fitur yang tersedia di website:
+    <ul>
+      <li>Artikel yang membantu penggiat travelling untuk mencari informasi terkait tempat wisata yang dituju</li>
+      <li>Forum bersama yang memudahkan para penggiat traveling untuk saling bertanya dan mengutarakan pendapat</li>
+      <li>Daftar Kunjungan yang membantu para penggiat traveling untuk merekap tempat yang sudah mereka kunjungi</li>
+    </ul>
+  </li>
+</ul>
 
 ## Anggota Kelompok
 | Nama                  | NIM           | Username Github                   |
