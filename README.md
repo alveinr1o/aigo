@@ -14,7 +14,7 @@
 <ul>
   <li>Jenis Aplikasi: Website</li>
   <li>Alasan memilih jenis tersebut: mudah dikembangkan</li>
-  <li>Sistem Operasi: Website</li>
+  <li>Sistem Operasi: Windows 10</li>
   <li>Text Editor: VS Code</li>
   <li>DBMS: SQLite</li>
   <li>Webserver: Django Development Server</li>
