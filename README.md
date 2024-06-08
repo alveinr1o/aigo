@@ -4,7 +4,7 @@
 
 - [Deskripsi](#deskripsi)
 - [Anggota Kelompok](#anggota-kelompok)
-- [Laporan](#laporan)
+- [Laporan dan Video](#laporan)
 
 ## Deskripsi 
 <img src='assets/logo.png'>
@@ -22,4 +22,5 @@
 | Ahmad Qaulan Sadida   | G6401201041   | https://github.com/ahqsa24        |
 | Rio Alvein Hasana     | G6401201042   | https://github.com/alveinr1o      |
 
-## Laporan 
+## Laporan dan Video Demo
+https://drive.google.com/file/d/174CrA33_OMfLCgOStX6yXnJwFt5NcYZm/view?usp=sharing
