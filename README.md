@@ -23,4 +23,8 @@
 | Rio Alvein Hasana     | G6401201042   | https://github.com/alveinr1o      |
 
 ## Laporan dan Video Demo
+<b>Laporan</b>
+https://docs.google.com/document/d/19kHE4LNVBYuTXfSuyk5DWxz4TCqFYmDggvYpzAjmRnk/edit?usp=sharing
+
+<b>Video Demo</b>
 https://drive.google.com/file/d/174CrA33_OMfLCgOStX6yXnJwFt5NcYZm/view?usp=sharing
